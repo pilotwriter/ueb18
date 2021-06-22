@@ -208,6 +208,9 @@ public class LagerDialog {
 	}
 
 	public static void printArray(Artikel[] artikels) {
+		if(artikels.length == 0){
+			System.out.println("No artikel found");
+		}
 		for (Artikel artikel : artikels) {
 			System.out.print(artikel.getClass());
 			System.out.println(artikel);
