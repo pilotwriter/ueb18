@@ -7,7 +7,7 @@ public class Artikel {
   private double price;
 
   /**
-   * Konstruktor für die Artikel Klasse
+   * Konstruktor fur die Artikel Klasse
    *
    * @param artikelnr die Artikelnummer des Artikel
    * @param art die Art des Artikel
@@ -27,10 +27,10 @@ public class Artikel {
       throw new IllegalArgumentException("Die Artikelnummer muss eine 4-stellige Zahl");
     }
     if (bestand < 0) {
-      throw new IllegalArgumentException("Bestand muss größer als 0 sein");
+      throw new IllegalArgumentException("Bestand muss grï¿½ï¿½er als 0 sein");
     }
     if (price <= 0) {
-      throw new IllegalArgumentException("Preis muss größer als 0 sein");
+      throw new IllegalArgumentException("Preis muss grï¿½ï¿½er als 0 sein");
     }
     this.artikelnr = artikelnr;
     this.bestand = bestand;
@@ -43,14 +43,14 @@ public class Artikel {
   }
 
   /**
-   * Füge dem aktuellen Bestand die eingegebene Menge hinzu
+   * Fuege dem aktuellen Bestand die eingegebene Menge hinzu
    *
-   * @param menge Die Anzahl der Element die zum Bestand hinzugefügt werden sollen
+   * @param menge Die Anzahl der Element die zum Bestand hinzugefï¿½gt werden sollen
    * @throws IllegalArgumentException Wenn <code>menge</code> kleiner als 1 ist
    */
   public void bucheZugang(int menge) {
     if (menge < 1) {
-      throw new IllegalArgumentException("Menge muss größer als 0 sein");
+      throw new IllegalArgumentException("Menge muss grï¿½ï¿½er als 0 sein");
     }
     bestand += menge;
   }
@@ -60,19 +60,19 @@ public class Artikel {
    *
    * @param menge Die Anzahl der Elemente die vom Bestand entfernt werden soll
    * @throws IllegalArgumentException Wenn <code>menge</code> kleiner als 1 ist oder die Menge nach
-   *     dem Abgang kleiner 0 wäre
+   *     dem Abgang kleiner 0 waere
    */
   public void bucheAbgang(int menge) {
     if (menge < 1) {
-      throw new IllegalArgumentException("Menge muss größer als 0 sein");
+      throw new IllegalArgumentException("Menge muss grï¿½ï¿½er als 0 sein");
     }
     if (bestand - menge < 0) {
-      throw new IllegalArgumentException("Bestand muss nach Abgang größer 0 sein");
+      throw new IllegalArgumentException("Bestand muss nach Abgang grï¿½ï¿½er 0 sein");
     }
     bestand -= menge;
   }
 
-  /** @param prozent der Prozentsatz um den der Preis geändert werden soll */
+  /** @param prozent der Prozentsatz um den der Preis geaendert werden soll */
   public void aenderePreis(double prozent) {
     double change = (prozent * getPrice()) / 100;
     double price = getPrice() + change;
@@ -82,7 +82,7 @@ public class Artikel {
   }
 
   /**
-   * Ändert die Art des Artikels
+   * Aendert die Art des Artikels
    *
    * @param art die Art des Artikel
    * @throws IllegalArgumentException Wenn <code>art</code> null oder leer ist
@@ -95,14 +95,14 @@ public class Artikel {
   }
 
   /**
-   * Ändert den Preis des Artikels
+   * Aendert den Preis des Artikels
    *
    * @param price der Preis des Artikels
    * @throws IllegalArgumentException Wenn <code>price</code> kleiner als 1 ist
    */
   public void setPrice(double price) {
     if (price <= 0) {
-      throw new IllegalArgumentException("Preis muss größer als 0 sein");
+      throw new IllegalArgumentException("Preis muss grï¿½ï¿½er als 0 sein");
     }
     this.price = Math.round(price * 100.0) / 100.0;
   }

@@ -59,7 +59,7 @@ public class LagerDialog {
 	}
 
 	/**
-	 * F�hrt den eingebenen Befehl aus
+	 * Fuehrt den eingebenen Befehl aus
 	 *
 	 * @param scanner das genutzte Scanner Objekt
 	 * @param input   der eingebene Command
